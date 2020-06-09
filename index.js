@@ -19,13 +19,11 @@ var base= UserInput("Enter the coordinates");
 // var InputRows = base.inputRows
 // var InputColumns = base.inputColumns
 
-
-
 var InputRows = base[0];
 var InputColumns = base[1];
       
-      console.log(InputRows);
-      console.log(InputColumns);
+      // console.log(InputRows);
+      // console.log(InputColumns);
 
 var lost=0;
 
@@ -150,48 +148,38 @@ for (var i = 0; i < UserDirection.length; i++) {
       }*/
        break
 
-    case 'F':
- // This case is for the forward movement 
-  if ((x > (InputRows-1)) || (y > (InputColumns-1))){
-    // console.log ("\n ***Cannot enter Rows or Column*** \n\n\n")
-     //console.log (x, y, "LOST")
-     lost=1;
-  }
+        case 'F':
 
-  else{
   if (orientation ==1){
+   if (y > (InputColumns-1)){
+     lost=1;
+     }
+else{
     if ((y+1)<=50)
   {x=x; y=y+1;}
-  //else {console.log ("\n Stopped from going out of bound \n")}
-   //    console.log (x, y)
-  }
+  }}
 
- 
+
   if (orientation==2){
     if ((x-1)>=0)
-    {
-  x=x-1; y=y;}
-  else {//console.log ("\n Stopped from going out of bound \n")
+    {x=x-1; y=y;}
   }
-      //console.log (x, y)
-  }
+
+
   if (orientation ==3){
     if ((y-1)>=0)
-
   {x=x; y=y-1;}
-  else {//console.log ("\n Stopped from going out of bound \n")
   }
-     // console.log (x, y)
-  }
+
 
  if (orientation ==4){
+  if (x > (InputRows-1)){
+     lost=1;
+     }
+
+  else{
    if ((x+1)<=50)
-  {x=x+1; y=y;
- 
-  }
-  else {//console.log ("\n Stopped from going out of bound \n")
-  }
-      //console.log (x, y)
+  {x=x+1; y=y;}
  }}
       break
 

@@ -5,20 +5,27 @@ var x =0; var y =0; // try and put this into an object
 // console.log(robot.x)
 
 
-// const UserInput = require('./testing.js');
-// var base= UserInput("please give me the coordinates");
+const UserInput = require('./testing.js');
+var base= UserInput("Enter the coordinates");
 
-// var base2 = UserInput("please give me the  seconds coordinates");
 //var base.inputRows, base.inputColumns
 //console.log(base.inputRows)
 //console.log(base.inputColumns)
       // console.log(InputRows);
       //       console.log(InputColumns);
 //console.log(base)
-var InputRows = base.inputRows
 
-var InputColumns = base.inputColumns
+// making objects of input Rows & columns
+// var InputRows = base.inputRows
+// var InputColumns = base.inputColumns
 
+
+
+var InputRows = base[0];
+var InputColumns = base[1];
+      
+      console.log(InputRows);
+      console.log(InputColumns);
 
 var lost=0;
 
@@ -41,8 +48,6 @@ var h = 0;
 for (var i = 0; i < InputRows; i++) { 
 	for (var j = 0; j < InputColumns; j++) { 
 		gfg[i][j] = h++; 
-  
-
 	} 
 } 
 

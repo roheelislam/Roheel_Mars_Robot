@@ -5,8 +5,8 @@ var x =0; var y =0; // try and put this into an object
 // console.log(robot.x)
 
 
-const UserInput = require('./testing.js');
-var base= UserInput("please give me the coordinates");
+// const UserInput = require('./testing.js');
+// var base= UserInput("please give me the coordinates");
 
 // var base2 = UserInput("please give me the  seconds coordinates");
 //var base.inputRows, base.inputColumns
